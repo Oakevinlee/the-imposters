@@ -34,7 +34,7 @@ class Recipe(models.Model):
         choices=REGIONS,
         default=REGIONS[0][0]
     )
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.name} ({self.id})'
@@ -48,6 +48,7 @@ class Review(models.Model):
         default=RATINGS[0][0]
     )
 
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     recipe = models.ForeignKey(
         Recipe,
         on_delete=models.CASCADE
