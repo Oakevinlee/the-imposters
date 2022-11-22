@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-from datetime import date
+from datetime import datetime
 from django.contrib.auth.models import User
 
 REGIONS = (
@@ -12,6 +12,14 @@ REGIONS = (
     ('ME', 'Middle East'),
     ('AF', 'Africa'),
     ('OC', 'Oceania'),
+)
+
+RATINGS = (
+    ('EX', 'Excellent!'),
+    ('YM', 'Yummy!'),
+    ('AL', 'Alright.'),
+    ('MH', 'Meh...'),
+    ('DS', 'Disgusting.'),
 )
 
 # Create your models here.
@@ -30,3 +38,20 @@ class Recipe(models.Model):
 
     def __str__(self):
         return f'{self.name} ({self.id})'
+
+class Review(models.Model):
+    comment = models.TextField(max_length=300)
+    date = models.DateTimeField(default=datetime.now)
+    rating = models.CharField(
+        max_length=2,
+        choices=RATINGS,
+        default=RATINGS[0][0]
+    )
+
+    recipe = models.ForeignKey(
+        Recipe,
+        on_delete=models.CASCADE
+    )
+
+    def __str__(self):
+        return f"{self.comment} has a rating of {self.rating}."
