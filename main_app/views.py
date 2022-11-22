@@ -38,6 +38,10 @@ class RecipeCreate(LoginRequiredMixin, CreateView):
   model = Recipe
   fields = ['name', 'ingredients', 'description', 'directions','region']
 
+class RecipeUpdate(LoginRequiredMixin, UpdateView):
+    model = Recipe
+    fields = ['name', 'ingredients', 'description', 'directions','region']
+
 def signup(request):
   error_message = ''
   if request.method == 'POST':
