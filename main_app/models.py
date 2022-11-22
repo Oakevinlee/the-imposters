@@ -39,6 +39,9 @@ class Recipe(models.Model):
     def __str__(self):
         return f'{self.name} ({self.id})'
 
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'recipe_id': self.id})
+
 class Review(models.Model):
     comment = models.TextField(max_length=300)
     date = models.DateTimeField(default=datetime.now)
