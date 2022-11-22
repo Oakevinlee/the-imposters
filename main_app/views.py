@@ -1,7 +1,10 @@
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render, redirect
-from .models import Recipe
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from .models import Recipe
 
 # Create your views here.
 def home(request):
@@ -15,6 +18,10 @@ def recipes_index(request):
   return render(request, 'recipes/index.html', {
     'recipes': recipes
 })
+
+class RecipeCreate(LoginRequiredMixin, CreateView):
+  model = Recipe
+  fields = ['name', 'ingredients', 'description', 'directions','region']
 
 def signup(request):
   error_message = ''
