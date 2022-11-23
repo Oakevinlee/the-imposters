@@ -37,6 +37,10 @@ class RecipeUpdate(LoginRequiredMixin, UpdateView):
     model = Recipe
     fields = ['name', 'ingredients', 'description', 'directions','region']
 
+class RecipeDelete(LoginRequiredMixin, DeleteView):
+    model = Recipe
+    success_url  = '/recipe'
+
 def signup(request):
   error_message = ''
   if request.method == 'POST':
