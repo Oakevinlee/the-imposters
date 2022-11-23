@@ -50,7 +50,6 @@ class Review(models.Model):
         choices=RATINGS,
         default=RATINGS[0][0]
     )
-
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     recipe = models.ForeignKey(
         Recipe,
