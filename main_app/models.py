@@ -58,3 +58,6 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.comment} has a rating of {self.rating}."
+
+    class Meta:
+        ordering = ['-date']

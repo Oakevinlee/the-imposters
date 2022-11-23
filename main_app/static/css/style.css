@@ -5,3 +5,28 @@ h5.sub {
 h2.recipe-title {
     margin-top: -1.8vmin;
 }
+
+nav {
+    background-color: #6ec24b;
+}
+
+#logo {
+    width: 8vmin;
+    margin-bottom: -2.5vmin;
+    margin-right: -0.5vmin;
+}
+
+#logo-title {
+    margin-left: -1vmin;
+    padding-right: 1vmin;
+    color: black;
+    font-weight: 300;
+}
+
+nav ul a {
+    color: black;
+}
+
+td>a {
+    color: #f60000;
+}

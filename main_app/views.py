@@ -4,7 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Recipe
+from .models import Recipe, Review
 from .forms import ReviewForm
 
 # Create your views here.
@@ -51,6 +51,10 @@ def add_review(request, recipe_id):
     new_review.user = request.user
     new_review.save()
   return redirect('detail', recipe_id=recipe_id)
+
+class ReviewDelete(LoginRequiredMixin, DeleteView):
+  model = Review
+  success_url = '/recipe'
 
 def signup(request):
   error_message = ''
