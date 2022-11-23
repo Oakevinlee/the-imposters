@@ -26,7 +26,7 @@ RATINGS = (
 
 class Recipe(models.Model):
     name = models.CharField(max_length=200)
-    ingredients = models.CharField(max_length=2000)
+    ingredients = models.TextField(max_length=2000)
     directions = models.TextField(max_length=2000)
     description = models.TextField(max_length=500)
     region = models.CharField(
@@ -50,7 +50,6 @@ class Review(models.Model):
         choices=RATINGS,
         default=RATINGS[0][0]
     )
-
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     recipe = models.ForeignKey(
         Recipe,

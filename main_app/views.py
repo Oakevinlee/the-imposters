@@ -5,6 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Recipe
+from .forms import ReviewForm
 
 # Create your views here.
 def home(request):
@@ -21,9 +22,9 @@ def recipes_index(request):
 
 def recipes_detail(request, recipe_id):
   recipe = Recipe.objects.get(id=recipe_id)
-
+  review_form = ReviewForm()
   return render(request, 'recipes/detail.html', {
-    'recipe': recipe
+    'recipe': recipe, 'review_form': review_form
   })
 
 class RecipeCreate(LoginRequiredMixin, CreateView):
@@ -40,6 +41,16 @@ class RecipeUpdate(LoginRequiredMixin, UpdateView):
 class RecipeDelete(LoginRequiredMixin, DeleteView):
     model = Recipe
     success_url  = '/recipe'
+
+@login_required
+def add_review(request, recipe_id):
+  form = ReviewForm(request.POST)
+  if form.is_valid():
+    new_review = form.save(commit=False)
+    new_review.recipe_id = recipe_id
+    new_review.user = request.user
+    new_review.save()
+  return redirect('detail', recipe_id=recipe_id)
 
 def signup(request):
   error_message = ''
