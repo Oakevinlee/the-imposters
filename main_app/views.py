@@ -29,6 +29,13 @@ def recipes_detail(request, recipe_id):
 class RecipeCreate(LoginRequiredMixin, CreateView):
   model = Recipe
   fields = ['name', 'ingredients', 'description', 'directions','region']
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
+
+class RecipeUpdate(LoginRequiredMixin, UpdateView):
+    model = Recipe
+    fields = ['name', 'ingredients', 'description', 'directions','region']
 
 def signup(request):
   error_message = ''
