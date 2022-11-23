@@ -7,11 +7,15 @@
   <div></div>
     <div class="card">
       <div class="card-content">
-        <span class="card-title">{{ recipe.name }}</span>
-        <p>Ingredients: {{ recipe.ingredients|linebreaks }}</p>
-        <p>Description: {{ recipe.description|linebreaks }}</p>
-          <p>Directions: <br>{{ recipe.directions }}</p>
-          <p>Region: {{ recipe.region }}</p>
+        <h2 class="recipe-title">{{ recipe.name }}</h2>
+        <h5 class="sub">Ingredients: </h5>
+        <p>{{ recipe.ingredients|linebreaks }}</p><br>
+        <h5 class="sub">Description: </h5>
+        <p>{{ recipe.description|linebreaks }}</p><br>
+        <h5 class="sub">Directions: </h5>
+        <p><br>{{ recipe.directions }}</p><br>
+        <h5 class="sub">Region: </h5>
+        <p>{{ recipe.get_region_display }}</p>
       </div>
       <div class="card-action">
         <a href="{% url 'recipes_update' recipe.id %}">Edit</a>
@@ -33,7 +37,7 @@
             <tr>
               <td>{{review.user}}</td>
               <td>{{review.date}}</td>
-              <td>{{review.comment}}</td>
+              <td>{{review.comment|linebreaks}}</td>
               <td>{{review.get_rating_display}}</td>
             </tr>
           {% endfor %}
