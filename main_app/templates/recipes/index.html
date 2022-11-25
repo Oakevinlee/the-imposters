@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>All Recipes</h1>
+<h1>All Recipes</h1><br>
+
+<div class="card" id="search">
+  <div class="card-action">
+    <h5 class="search">Search For Recipe: </h5>
+    <form action="{% url 'search_results' %}" method="get">
+      <input name="q" type="text" placeholder="Name Of Recipe or Region" id="search-bar">
+      <button type="submit" class="btn">Search</button>
+    </form>
+  </div>
+</div>
+<br><br>
 
 {% for recipe in recipes %}
   <a href="{% url 'detail' recipe.id %}">
@@ -13,5 +24,10 @@
     </div>
   </a>
 {% endfor %}
+
+<script>
+  const selectEl = document.getElementById('drop-down');
+  M.FormSelect.init(selectEl);
+</script>
 
 {% endblock %}

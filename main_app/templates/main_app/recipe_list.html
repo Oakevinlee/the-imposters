@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Search Results:</h1>
+
+{% for recipe in object_list %}
+{% if recipe != None %}
+  <a href="{% url 'detail' recipe.id %}">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ recipe.name }}</span>
+        <p>Description: {{ recipe.description|linebreaks }}</p>
+      </div>
+    </div>
+  </a>
+  {% else %}
+    <h5>No Recipes Found... :(</h5>
+  {% endif %}
+{% endfor %}
+
+{% endblock %}

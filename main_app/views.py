@@ -1,4 +1,5 @@
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -6,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Recipe, Review
 from .forms import ReviewForm
+from django.db.models import Q
 
 # Create your views here.
 def home(request):
@@ -55,6 +57,16 @@ def add_review(request, recipe_id):
 class ReviewDelete(LoginRequiredMixin, DeleteView):
   model = Review
   success_url = '/recipe'
+
+class SearchResultsView(ListView):
+  model = Recipe
+
+  def get_queryset(self):
+    query = self.request.GET.get("q")
+    object_list = Recipe.objects.filter(
+      Q(name__icontains=query) | Q(region__icontains=query)
+    )
+    return object_list
 
 def signup(request):
   error_message = ''

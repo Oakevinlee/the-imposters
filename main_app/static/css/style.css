@@ -30,3 +30,47 @@ nav ul a {
 td>a {
     color: #f60000;
 }
+
+#search-bar {
+    width: 40vmin;
+    margin-left: 15vmin;
+    margin-top: 2vmin;
+}
+
+#search {
+    margin-left: 20vmin;
+    margin-right: 20vmin;
+}
+
+.search {
+    font-size: 5vmin;
+}
+
+.card, h1 {
+    margin-left: 4vmin;
+    margin-right: 4vmin;
+}
+
+h5.search {
+    margin-left: 7vmin;
+}
+
+@media (max-width: 2560px) {
+    
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
