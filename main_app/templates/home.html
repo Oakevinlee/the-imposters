@@ -1,5 +1,48 @@
-{% extends 'base.html' %}
-{% block content %}
-<h1>Home</h1>
+{% load static %}
 
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <header class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <ul>
+                    <li>&nbsp;&nbsp;<a href="{% url 'home' %}" class="left brand-logo" id="logo-title"><img src="/static/ft logo-200h.png" alt="logo" id="logo">One World Recipes</a></li>
+                </ul>
+                <ul class="right">
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'index' %}">View All Recipes</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'recipes_create' %}">Add Recipe</a></li>
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                    {% else %}
+                    <li><a href="{% url 'login' %}">Log In</a></li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="bg">
+        <div class="center">
+            <h1>One World Recipes</h1>
+            <h5>The Whole World On Your Plate!</h5><br><br>
+            <a href="{% url 'login' %}" class="btn" id="btn">Log In</a> Or
+            <a href="{% url 'signup' %}" class="btn" id="btn"> Sign Up!</a>
+        </div><br><br>
+    </div>
+    <footer>All Rights Reserved, &copy; The Imposters</footer>
+</body>
+
+</html>

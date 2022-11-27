@@ -1,0 +1,109 @@
+h5.sub {
+    font-style: italic;
+}
+
+h2.recipe-title {
+    margin-top: -1.8vmin;
+}
+
+nav, footer {
+    background-color: #6ec24b;
+}
+
+#logo {
+    width: 8vmin;
+    margin-bottom: -2.5vmin;
+    margin-right: -0.5vmin;
+}
+
+#logo-title {
+    margin-left: -1vmin;
+    padding-right: 1vmin;
+    color: black;
+    font-weight: 300;
+}
+
+nav ul a {
+    color: black;
+}
+
+td>a {
+    color: #f60000;
+}
+
+#search-bar {
+    width: 40vmin;
+    margin-left: 15vmin;
+    margin-top: 2vmin;
+}
+
+#search {
+    margin-left: 20vmin;
+    margin-right: 20vmin;
+}
+
+.search {
+    font-size: 5vmin;
+}
+
+.card, h1 {
+    margin-left: 4vmin;
+    margin-right: 4vmin;
+}
+
+h5.search {
+    margin-left: 7vmin;
+}
+
+body {
+    background-image: url("/static/One World Recipes.png");
+    background-size: cover;
+}
+
+#home-img {
+    position: relative;
+    margin-top: -62vmin;
+    width: 100%;
+    z-index: -1;
+}
+
+footer {
+    width: 100%;
+    padding-top: 2vmin;
+    padding-bottom: 2vmin;
+    padding-left: 2vmin;
+    margin-top: -1vmin;
+}
+
+.center {
+    text-align: center;
+    color: white;
+    font-size: 3vmin;
+    margin-top: 21vmin;
+    margin-bottom: 25vmin;
+}
+
+div.center>h1 {
+    font-size: 12vmin;
+    color: #6ec24b;
+}
+
+div.center>h5 {
+    margin-top: -1vmin;
+    font-size: 4vmin;
+}
+
+#btn {
+    width: 30vmin;
+    padding-top: 1vmin;
+    padding-bottom: 6vmin;
+    background-color: #6ec24b;
+    margin-left: 3vmin;
+    margin-right: 3vmin;
+    font-size: 2.5vmin;
+    transition: 250ms;
+}
+
+#btn:hover {
+    transform: scale(1.1);
+}
