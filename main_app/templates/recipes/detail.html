@@ -9,13 +9,13 @@
     <div class="card-content">
       <h2 class="recipe-title">{{ recipe.name }}</h2>
       <h5 class="sub">Ingredients: </h5>
-      <p class="details">{{ recipe.ingredients|linebreaks }}</p><br>
+      <p>{{ recipe.ingredients|linebreaks }}</p><br>
       <h5 class="sub">Description: </h5>
-      <p class="details">{{ recipe.description|linebreaks }}</p><br>
+      <p>{{ recipe.description|linebreaks }}</p><br>
       <h5 class="sub">Directions: </h5>
-      <p class="details"><br>{{ recipe.directions }}</p><br>
+      <p><br>{{ recipe.directions }}</p><br>
       <h5 class="sub">Region: </h5>
-      <p class="details">{{ recipe.get_region_display }}</p>
+      <p>{{ recipe.get_region_display }}</p>
     </div>
     {% if request.user == recipe.user %}
     <div class="card-action">
