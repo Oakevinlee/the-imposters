@@ -4,14 +4,14 @@ from datetime import datetime
 from django.contrib.auth.models import User
 
 REGIONS = (
-    ('NA', 'North America'),
-    ('SA', 'South America'),
-    ('CA', 'Central America'),
-    ('EU', 'Europe'),
-    ('AS', 'Asia'),
-    ('ME', 'Middle East'),
-    ('AF', 'Africa'),
-    ('OC', 'Oceania'),
+    ('NORTH AMERICAN', 'North America'),
+    ('SOUTH AMERICAN', 'South America'),
+    ('CENTRAL AMERICAN', 'Central America'),
+    ('EUROPEAN', 'Europe'),
+    ('ASIAN', 'Asia'),
+    ('MIDDLE EASTERN', 'Middle East'),
+    ('AFRICAN', 'Africa'),
+    ('OCEANIC', 'Oceania'),
 )
 
 RATINGS = (
@@ -30,7 +30,7 @@ class Recipe(models.Model):
     directions = models.TextField(max_length=2000)
     description = models.TextField(max_length=500)
     region = models.CharField(
-        max_length=2,
+        max_length=16,
         choices=REGIONS,
         default=REGIONS[0][0]
     )
@@ -58,3 +58,6 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.comment} has a rating of {self.rating}."
+
+    class Meta:
+        ordering = ['-date']

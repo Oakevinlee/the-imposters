@@ -5,3 +5,72 @@ h5.sub {
 h2.recipe-title {
     margin-top: -1.8vmin;
 }
+
+nav, footer {
+    background-color: #6ec24b;
+}
+
+#logo {
+    width: 8vmin;
+    margin-bottom: -2.5vmin;
+    margin-right: -0.5vmin;
+}
+
+#logo-title {
+    margin-left: -1vmin;
+    padding-right: 1vmin;
+    color: black;
+    font-weight: 300;
+}
+
+nav ul a {
+    color: black;
+}
+
+td>a {
+    color: #f60000;
+}
+
+#search-bar {
+    width: 40vmin;
+    margin-left: 15vmin;
+    margin-top: 2vmin;
+}
+
+#search {
+    margin-left: 20vmin;
+    margin-right: 20vmin;
+}
+
+.search {
+    font-size: 5vmin;
+}
+
+.card, h1 {
+    margin-left: 4vmin;
+    margin-right: 4vmin;
+}
+
+h5.search {
+    margin-left: 7vmin;
+}
+
+@media (max-width: 2560px) {
+    
+}
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
