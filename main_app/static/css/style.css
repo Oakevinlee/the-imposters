@@ -1,9 +1,11 @@
 h5.sub {
     font-style: italic;
+    margin-left: 2vmin;
 }
 
 h2.recipe-title {
     margin-top: -1.8vmin;
+    margin-left: 1vmin;
 }
 
 nav, footer {
@@ -47,12 +49,36 @@ td>a {
 }
 
 .card, h1 {
-    margin-left: 4vmin;
-    margin-right: 4vmin;
+    margin-left: 10vmin;
+    margin-right: 10vmin;
 }
 
 h5.search {
     margin-left: 7vmin;
+}
+
+.card {
+    background-color: #dedddd;
+    color: black;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+div>p {
+    padding-left: 7vmin;
+}
+
+textarea {
+    background-color: white;
+}
+
+#recipe {
+    margin-top: 2vmin;
+    margin-bottom: 2vmin;
 }
 
 @media (max-width: 2560px) {
