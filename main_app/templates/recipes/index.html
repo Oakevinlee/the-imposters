@@ -15,14 +15,19 @@
 <br><br><br><br>
 
 {% for recipe in recipes %}
-  <a href="{% url 'detail' recipe.id %}">
-    <div class="card">
-      <div class="card-content" id="recipe">
-        <span class="card-title">{{ recipe.name }}</span>
-        <p>Description: {{ recipe.description|linebreaks }}</p>
-      </div>
+<a href="{% url 'detail' recipe.id %}">
+  <div class="card">
+    <div class="card-content" id="recipe">
+      {% for photo in recipe.photo_set.all %}
+      <img class="responsive-img card-panel" src="{{photo.url}}">
+      {% empty %}
+      <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+      {% endfor %}
+      <span class="card-title">{{ recipe.name }}</span>
+      <p>Description: {{ recipe.description|linebreaks }}</p>
     </div>
-  </a>
+  </div>
+</a>
 {% endfor %} <br><br>
 
 <script>

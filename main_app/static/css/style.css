@@ -81,6 +81,10 @@ textarea {
     margin-bottom: 2vmin;
 }
 
+.dropdown-content li>span {
+    color: black;
+}
+
 @media (max-width: 2560px) {
     
 }
