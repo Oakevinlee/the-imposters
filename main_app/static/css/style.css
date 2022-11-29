@@ -108,6 +108,11 @@ textarea {
 
 div#recipe.card-content {
     display: flex;
+    transition: 250ms;
+}
+
+div#recipe.card-content:hover {
+    transform: scale(1.1);
 }
 
 .card .card-title {
