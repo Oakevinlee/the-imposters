@@ -3,15 +3,11 @@
 
 <h1>All Recipes</h1><br>
 
-<div class="card" id="search">
-  <div class="card-action">
-    <h5 class="search">Search For Recipe: </h5>
-    <form action="{% url 'search_results' %}" method="get">
-      <input name="q" type="text" placeholder="Name Of Recipe or Region" id="search-bar">
-      <button type="submit" class="btn">Search</button>
-    </form>
-  </div>
-</div>
+<h5 class="search">Search For Recipe: </h5>
+  <form action="{% url 'search_results' %}" method="get" id="search">
+    <input name="q" type="text" placeholder="Name Of Recipe or Region" id="search-bar">
+    <button type="submit" class="btn">Search</button>
+  </form>
 <br><br><br><br>
 
 {% for recipe in recipes %}
@@ -27,7 +23,7 @@
       <div class="index-info">
         <span class="card-title">{{ recipe.name }}</span>
         <p>Description: {{ recipe.description|linebreaks }}</p><br>
-        <p>Region: {{ recipe.get_region_display }}</p><br>
+        <p>Region: {{ recipe.get_region_display }}</p>
       </div>
     </div>
   </a>

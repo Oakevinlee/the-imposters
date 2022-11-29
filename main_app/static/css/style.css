@@ -34,29 +34,24 @@ td>a {
 }
 
 #search-bar {
-    width: 50vmin;
-    margin-top: 2vmin;
-
+    width: 64vmin;
 }
 
 #search {
-    margin-left: 40vmin;
-    margin-right: 40vmin;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-left: 30vmin;
+    margin-right: 30vmin;
 }
 
-.search {
+h5.search {
     font-size: 5vmin;
+    text-align: center;
+    margin-bottom: 3vmin;
 }
 
 .card, h1 {
     margin-left: 10vmin;
     margin-right: 10vmin;
-}
-
-h5.search {
-    margin-left: 7vmin;
 }
 
 .card {
@@ -122,7 +117,7 @@ div#recipe.card-content {
 
 .card .card-title {
     font-size: 4.5vmin;
-    padding-bottom: 3vmin;
+    padding-bottom: 1vmin;
     font-weight: 500;
 }
 
@@ -133,16 +128,31 @@ p {
 #image-detail {
     max-height: 40vmin;
     max-width: 50vmin;
+    margin-left: 2vmin;
 }
+
+.photo-title {
+    margin-left: 2vmin;
+}
+
+.btn {
+    background-color: #6ec24b;
+    width: 15vmin;
+    transition: 250ms;
+}
+
+.btn:hover {
+    background-color: white;
+    border: #6ec24b solid 0.2vmin;
+    color: #6ec24b;
+    padding-bottom: 0.1vmin;
+}
+
 
 @media (min-height: 1056px) {
     #logo {
         width: 6.7vmin;
     }
-}
-
-@media (max-width: 1440px) {
-
 }
 
 @media (min-height: 1179px) {
