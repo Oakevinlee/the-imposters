@@ -81,6 +81,29 @@ textarea {
     margin-bottom: 2vmin;
 }
 
+#index {
+    width: 30vmin;
+    height: 30vmin;
+}
+
+.dropdown-content li>span {
+    color: black;
+}
+
+.index-info {
+    display: inline-block;
+    margin-left: 2vmin;
+    color: black;
+}
+
+.card .card-content p {
+    max-width: 100vmin;
+}
+
+#upload-photo {
+    text-align: center;
+}
+
 @media (max-width: 2560px) {
     
 }
@@ -89,8 +112,22 @@ textarea {
 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1115px) {
+    .card .card-content p {
+        max-width: 80vmin;
+    }
+}
 
+@media (max-width: 970px) {
+    .card .card-content p {
+        max-width: 70vmin;
+    }
+}
+
+@media (max-width: 425px) {
+    .card .card-content p {
+        max-width: 10vmin;
+    }
 }
 
 @media (max-width: 375px) {
