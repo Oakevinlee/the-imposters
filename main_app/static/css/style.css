@@ -40,8 +40,8 @@ td>a {
 }
 
 #search {
-    margin-left: 30vmin;
-    margin-right: 30vmin;
+    margin-left: 40vmin;
+    margin-right: 40vmin;
     display: flex;
     justify-content: center;
 }
@@ -164,6 +164,11 @@ p {
     #search {
         margin-left: 10vmin;
         margin-right: 10vmin;
+    }
+
+    #index-item {
+        margin-left: 5vmin;
+        margin-right: 5vmin;
     }
 }
 
