@@ -1,14 +1,66 @@
-{% extends 'base.html' %}
+{% load static %}
 
-{% block content%}
-<h4>What is One World Recipes?</h4>
-<p>One World Recipes is a recipe book developed by food lovers as a team. The mission of our web application was to provide an app for foodies and cooks of any level to easily access recipes from around the globe so that everyone can enjoy diverse, homemade cuisines in the comfort of your kitchen. The application lets you to create, update and delete recipes. The users can review and rate recipes and also delete their comments.
-</p>
-<h5>Our Mission</h5>
-<p>Provide an app for foodies and cooks of any level to easily access recipes from around the globe so that everyone can enjoy diverse, homemade cuisines in the comfort of your kitchen.</p>
-<h5>Problem</h5>
-<p>There are too many online recipes with unnecessary information. Theres too much fluff and uselss info</p>
-<h5>Solution</h5>
-<p>We took matter into our own hands and built this app so that you can source recipes from around the world to your fingertips.</p>
+<!DOCTYPE html>
+<html lang="en">
 
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <header class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <ul>
+                    <li>&nbsp;&nbsp;<a href="{% url 'home' %}" class="left brand-logo" id="logo-title"><img
+                                src="/static/ft logo-200h.png" alt="logo" id="logo">One World Recipes</a></li>
+                </ul>
+                <ul class="right">
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'index' %}">View All Recipes</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'recipes_create' %}">Add Recipe</a></li>
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                    {% else %}
+                    <li><a href="{% url 'login' %}">Log In</a></li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="card">
+        <h4>What is One World Recipes?</h4>
+        <p>One World Recipes is a recipe book developed by food lovers as a team. 
+            The mission of our web application was to provide an app for foodies and cooks of any level to 
+            easily access recipes from around the globe so that everyone can enjoy diverse, homemade cuisines in the comfort of your kitchen. 
+            The application lets you to create, update and delete recipes. 
+            The users can review and rate recipes and also delete their comments.
+        </p>
+    </div>
+    <div class="card">
+        <h4>Our Mission</h4>
+        <p>Provide an app for foodies and cooks of any level to easily access recipes 
+            from around the globe so that everyone can enjoy diverse, 
+            homemade cuisines in the comfort of your kitchen.</p>
+    </div>
+    <div class="card">
+        <h4>Problem</h4>
+        <p>There are too many online recipes with unnecessary information. 
+            We're here to trim the fat so that you can get cooking faster.</p>
+    </div>
+    <div class="card">
+        <h4>Solution</h4>
+        <p>We took matter into our own hands and built this app so that you can source recipes 
+            from around the world to your fingertips.</p>
+    </div> <br><br>
+    <footer>All Rights Reserved, &copy; The Imposters</footer>
+</body>
+
+</html>

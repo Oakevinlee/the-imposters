@@ -83,9 +83,14 @@ textarea {
     margin-bottom: 4vmin;
 }
 
-#index {
+#index-photo {
     width: 30vmin;
     height: 30vmin;
+}
+
+#index-item {
+    margin-left: 20vmin;
+    margin-right: 20vmin;
 }
 
 .dropdown-content li>span {

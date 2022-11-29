@@ -15,12 +15,12 @@
 <br><br><br><br>
 
 {% for recipe in recipes %}
-<div class="card">
+<div class="card" id="index-item">
   <a href="{% url 'detail' recipe.id %}">
     <div class="card-content" id="recipe">
       {% for photo in recipe.photo_set.all %}
         {% if forloop.counter < 2 %} 
-          <img id="index" src="{{photo.url}}">
+          <img id="index-photo" src="{{photo.url}}">
         {% endif %}
       {% empty %}
       {% endfor %}
