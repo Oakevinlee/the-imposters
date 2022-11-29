@@ -3,23 +3,11 @@
 
 <h1>All Recipes 🍱</h1><br>
 
-<<<<<<< HEAD
-<div class="card" id="search">
-  <div class="card-action">
-    <h5 class="search">Search For Recipe 👓 </h5>
-    <form action="{% url 'search_results' %}" method="get">
-      <input name="q" type="text" placeholder="Name Of Recipe or Region" id="search-bar">
-      <button type="submit" class="btn">Search</button>
-    </form>
-  </div>
-</div>
-=======
 <h5 class="search">Search For Recipe: </h5>
   <form action="{% url 'search_results' %}" method="get" id="search">
     <input name="q" type="text" placeholder="Name Of Recipe or Region" id="search-bar">
     <button type="submit" class="btn">Search</button>
   </form>
->>>>>>> main
 <br><br><br><br>
 
 {% for recipe in recipes %}
