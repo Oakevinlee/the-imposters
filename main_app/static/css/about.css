@@ -1,0 +1,88 @@
+body {
+    background-image: url("/static/Diabetes-Superfoods-min.jpg");
+    background-size: cover;
+    color: white;
+}
+
+nav {
+    background-color: #6ec24b;
+}
+
+#logo {
+    width: 8vmin;
+    margin-bottom: -2.5vmin;
+    margin-right: -0.5vmin;
+}
+
+#logo-title {
+    margin-left: -1vmin;
+    padding-right: 1vmin;
+    color: black;
+    font-weight: 300;
+}
+
+nav ul a {
+    color: black;
+}
+
+td>a {
+    color: #f60000;
+}
+
+footer {
+    background-color: #6ec24b;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+    color: white;
+    font-size: 3vmin;
+    margin-top: 21vmin;
+    margin-bottom: 25vmin;
+}
+
+div.center>h1 {
+    font-size: 12vmin;
+    color: #6ec24b;
+}
+
+div.center>h5 {
+    margin-top: -1vmin;
+    font-size: 4vmin;
+}
+
+#btn {
+    width: 30vmin;
+    padding-top: 1vmin;
+    padding-bottom: 6vmin;
+    background-color: #6ec24b;
+    margin-left: 3vmin;
+    margin-right: 3vmin;
+    font-size: 2.5vmin;
+    transition: 250ms;
+}
+
+#btn:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    padding: 1vmin;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+h4 {
+    font-weight: 500;
+    text-align: center;
+    font-size: 5vmin;
+}
+
+p {
+    font-size: 2.5vmin;
+    margin-left: 6vmin;
+    margin-right: 6vmin;
+    text-align: center;
+}
