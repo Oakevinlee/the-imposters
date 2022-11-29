@@ -18,8 +18,8 @@
     </div>
     {% if request.user == recipe.user %}
     <div class="card-action">
-      <a href="{% url 'recipes_update' recipe.id %}">Edit</a>
-      <a href="{% url 'recipes_delete' recipe.id %}">DELETE</a>
+      <a href="{% url 'recipes_update' recipe.id %}">Edit 📝</a>
+      <a href="{% url 'recipes_delete' recipe.id %}">DELETE 🗑️</a>
     </div>
     {% endif %}
     <!-- Insert photo markup below this comment -->
@@ -40,7 +40,7 @@
       <form action="{% url 'add_review' recipe.id %}" method="POST">
         {% csrf_token %}
         {{ review_form.as_p }}
-        <input type="submit" class="btn" value="Add Review">
+        <input type="submit" class="btn" value="Add Review🖋️">
       </form>
     </div>
     <table class="striped">
