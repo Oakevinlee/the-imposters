@@ -15,19 +15,22 @@
 <br><br><br><br>
 
 {% for recipe in recipes %}
-<a href="{% url 'detail' recipe.id %}">
-  <div class="card">
+<div class="card">
+  <a href="{% url 'detail' recipe.id %}">
     <div class="card-content" id="recipe">
       {% for photo in recipe.photo_set.all %}
-      <img class="responsive-img card-panel" src="{{photo.url}}">
+        {% if forloop.counter < 2 %} 
+          <img id="index" src="{{photo.url}}">
+        {% endif %}
       {% empty %}
-      <div class="card-panel teal-text center-align">No Photos Uploaded</div>
       {% endfor %}
-      <span class="card-title">{{ recipe.name }}</span>
-      <p>Description: {{ recipe.description|linebreaks }}</p>
+      <div class="index-info">
+        <span class="card-title">{{ recipe.name }}</span>
+        <p id="description">Description: {{ recipe.description|linebreaks }}</p><br>
+      </div>
     </div>
-  </div>
-</a>
+  </a>
+</div>
 {% endfor %} <br><br>
 
 <script>
