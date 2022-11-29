@@ -26,7 +26,8 @@
       {% endfor %}
       <div class="index-info">
         <span class="card-title">{{ recipe.name }}</span>
-        <p id="description">Description: {{ recipe.description|linebreaks }}</p><br>
+        <p>Description: {{ recipe.description|linebreaks }}</p><br>
+        <p>Region: {{ recipe.get_region_display }}</p><br>
       </div>
     </div>
   </a>
