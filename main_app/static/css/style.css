@@ -34,14 +34,16 @@ td>a {
 }
 
 #search-bar {
-    width: 40vmin;
-    margin-left: 15vmin;
+    width: 50vmin;
     margin-top: 2vmin;
+
 }
 
 #search {
     margin-left: 20vmin;
     margin-right: 20vmin;
+    display: flex;
+    justify-content: center;
 }
 
 .search {
@@ -77,8 +79,8 @@ textarea {
 }
 
 #recipe {
-    margin-top: 2vmin;
-    margin-bottom: 2vmin;
+    margin-top: 1vmin;
+    margin-bottom: 4vmin;
 }
 
 #index {
@@ -92,7 +94,7 @@ textarea {
 
 .index-info {
     display: inline-block;
-    margin-left: 2vmin;
+    margin-left: 3vmin;
     color: black;
 }
 
@@ -102,6 +104,20 @@ textarea {
 
 #upload-photo {
     text-align: center;
+}
+
+div#recipe.card-content {
+    display: flex;
+}
+
+.card .card-title {
+    font-size: 4.5vmin;
+    padding-bottom: 3vmin;
+    font-weight: 500;
+}
+
+p {
+    font-size: 2.2vmin;
 }
 
 @media (max-width: 2560px) {
@@ -122,11 +138,21 @@ textarea {
     .card .card-content p {
         max-width: 70vmin;
     }
+
+    #search {
+        margin-left: 10vmin;
+        margin-right: 10vmin;
+    }
 }
 
 @media (max-width: 425px) {
     .card .card-content p {
         max-width: 10vmin;
+    }
+
+    #search {
+        margin-left: 10vmin;
+        margin-right: 10vmin;
     }
 }
 
