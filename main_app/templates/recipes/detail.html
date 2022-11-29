@@ -33,7 +33,7 @@
       <form action="{% url 'add_photo' recipe.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
         {% csrf_token %}
         <input type="file" name="photo-file">
-        <button type="submit" class="btn">Upload Photo</button>
+        <button type="submit" class="btn">Upload</button>
       </form>
     </div>
     <div class="card-action">
