@@ -120,17 +120,24 @@ p {
     font-size: 2.2vmin;
 }
 
-@media (max-width: 2560px) {
-    
+@media (min-height: 1056px) {
+    #logo {
+        width: 6.7vmin;
+    }
 }
 
 @media (max-width: 1440px) {
 
 }
 
-@media (max-width: 1115px) {
+@media (min-height: 1179px) {
     .card .card-content p {
         max-width: 80vmin;
+    }
+
+    #logo {
+        width: 6.1vmin;
+        margin-bottom: -2vmin;
     }
 }
 
