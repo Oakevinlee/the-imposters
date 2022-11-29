@@ -165,6 +165,11 @@ p {
         margin-left: 10vmin;
         margin-right: 10vmin;
     }
+
+    #index-item {
+        margin-left: 5vmin;
+        margin-right: 5vmin;
+    }
 }
 
 @media (max-width: 425px) {
