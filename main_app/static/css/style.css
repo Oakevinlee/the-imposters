@@ -111,8 +111,8 @@ div#recipe.card-content {
     transition: 250ms;
 }
 
-div#recipe.card-content:hover {
-    transform: scale(1.1);
+.card:hover .card-content:hover {
+    transform: scale(1.01);
 }
 
 .card .card-title {
