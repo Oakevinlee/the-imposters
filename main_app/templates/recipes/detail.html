@@ -23,6 +23,7 @@
     </div>
     {% endif %}
     <!-- Insert photo markup below this comment -->
+    <h2 class="photo-title">Photos:</h2>
     {% for photo in recipe.photo_set.all %}
     <img class="responsive-img card-panel" src="{{photo.url}}" id="image-detail">
     {% empty %}
