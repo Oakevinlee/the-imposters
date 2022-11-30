@@ -12,14 +12,14 @@
       <h5 class="sub">Description: </h5>
       <p>{{ recipe.description|linebreaks }}</p><br>
       <h5 class="sub">Directions: </h5>
-      <p><br>{{ recipe.directions }}</p><br>
+      <p><br>{{ recipe.directions|linebreaks }}</p><br>
       <h5 class="sub">Region: </h5>
       <p>{{ recipe.get_region_display }}</p>
     </div>
     {% if request.user == recipe.user %}
     <div class="card-action">
-      <a href="{% url 'recipes_update' recipe.id %}">Edit 📝</a>
-      <a href="{% url 'recipes_delete' recipe.id %}">DELETE 🗑️</a>
+      <a href="{% url 'recipes_update' recipe.id %}" class="edit-delete">Edit 📝</a>
+      <a href="{% url 'recipes_delete' recipe.id %}" class="edit-delete">DELETE 🗑️</a>
     </div>
     {% endif %}
     <!-- Insert photo markup below this comment -->
