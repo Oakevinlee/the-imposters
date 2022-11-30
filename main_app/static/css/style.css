@@ -148,6 +148,9 @@ p {
     padding-bottom: 0.1vmin;
 }
 
+#add-review {
+    width: 18vmin;
+}
 
 @media (min-height: 1056px) {
     #logo {

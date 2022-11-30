@@ -1,5 +1,6 @@
 # One_World_Recipes
-# ![Wireframe]
+# ![Screenshot](https://imgur.com/a/22YXICM)
+# (https://imgur.com/ixz2CE0)
 One World Recipes is a recipe book developed by food lovers as a team. The mission of our web application was to provide an app for foodies and cooks of any level to easily access recipes from around the globe so that everyone can enjoy diverse, homemade cuisines in the comfort of your kitchen. The application lets you to create, update and delete recipes. The users can review and rate recipes and also delete their comments. 
 # Technologies Used
 * ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
