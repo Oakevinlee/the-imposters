@@ -29,6 +29,7 @@
     {% empty %}
     <div class="card-panel teal-text center-align">No Photos Uploaded</div>
     {% endfor %}
+    {% if request.user == recipe.user %}
     <div class="card" id="upload-photo">
       <form action="{% url 'add_photo' recipe.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
         {% csrf_token %}
@@ -36,11 +37,13 @@
         <button type="submit" class="btn">Upload</button>
       </form>
     </div>
+    {% else %}
+    {% endif %}
     <div class="card-action">
       <form action="{% url 'add_review' recipe.id %}" method="POST">
         {% csrf_token %}
         {{ review_form.as_p }}
-        <input type="submit" class="btn" id="add-review" value="Add Review🖋️">
+        <input type="submit" class="btn" id="add-review" value="Add Review 🖋️">
       </form>
     </div>
     <table class="striped">
