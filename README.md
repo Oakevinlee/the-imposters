@@ -1,7 +1,19 @@
 # One World Recipes
 
-### [CLICK TO DEMO](https://theimposters-ga.herokuapp.com/recipe/)
+<div id="description" align="center">
 
+  ### [CLICK TO DEMO](https://theimposters-ga.herokuapp.com/recipe/)
+
+  # What is One World Recipes?
+  One World Recipes is a recipe book developed by food lovers as a team. The mission of our web application was to provide an app for foodies and cooks of any level to easily access recipes from around the globe so that everyone can enjoy diverse, homemade cuisines in the comfort of your kitchen. The application lets you to create, update and delete recipes. The users can review and rate recipes and also delete their comments. 
+
+  ## The Team:
+  ##### Kevin Lee
+  ##### Anita Krishnamohan
+  ##### Fernando Jose Pina
+  ##### Gabriel (Bobby) Covaci
+
+</div>
 
 ## :camera_flash: Screenshots 
 
@@ -12,10 +24,6 @@
 | <h3>Recipe Details Page</h3> | <img src="https://i.imgur.com/xlRa9T9.png" width="700" /> |
 | <h3>Recipe Photos</h3> | <img src="https://i.imgur.com/Whtf9Co.png" width="700" /> |
 | <h3>Recipe Reviews</h3> | <img src="https://i.imgur.com/cRjHqKQ.png" width="700" /> |
-
-
-# What is One World Recipes?
-One World Recipes is a recipe book developed by food lovers as a team. The mission of our web application was to provide an app for foodies and cooks of any level to easily access recipes from around the globe so that everyone can enjoy diverse, homemade cuisines in the comfort of your kitchen. The application lets you to create, update and delete recipes. The users can review and rate recipes and also delete their comments. 
 
 # Technologies Used
 * ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
