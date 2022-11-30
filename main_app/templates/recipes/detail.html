@@ -12,7 +12,7 @@
       <h5 class="sub">Description: </h5>
       <p>{{ recipe.description|linebreaks }}</p><br>
       <h5 class="sub">Directions: </h5>
-      <p><br>{{ recipe.directions }}</p><br>
+      <p><br>{{ recipe.directions|linebreaks }}</p><br>
       <h5 class="sub">Region: </h5>
       <p>{{ recipe.get_region_display }}</p>
     </div>

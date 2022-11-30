@@ -152,6 +152,11 @@ p {
     width: 18vmin;
 }
 
+#delete-recipe {
+    width: 20vmin;
+    margin-right: 1vmin;
+}
+
 @media (min-height: 1056px) {
     #logo {
         width: 6.7vmin;
