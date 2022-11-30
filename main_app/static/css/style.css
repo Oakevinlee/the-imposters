@@ -158,7 +158,7 @@ p {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-    color: black;
+    color: white;
     font-size: 2.5vmin;
     transition: 200ms;
     margin-left: 2vmin;
