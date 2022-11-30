@@ -152,6 +152,14 @@ p {
     width: 18vmin;
 }
 
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: black;
+    font-size: 2.5vmin;
+    transition: 200ms;
+    margin-left: 2vmin;
+}
+
+
 @media (min-height: 1056px) {
     #logo {
         width: 6.7vmin;

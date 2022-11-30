@@ -18,8 +18,8 @@
     </div>
     {% if request.user == recipe.user %}
     <div class="card-action">
-      <a href="{% url 'recipes_update' recipe.id %}">Edit 📝</a>
-      <a href="{% url 'recipes_delete' recipe.id %}">DELETE 🗑️</a>
+      <a href="{% url 'recipes_update' recipe.id %}" class="edit-delete">Edit 📝</a>
+      <a href="{% url 'recipes_delete' recipe.id %}" class="edit-delete">DELETE 🗑️</a>
     </div>
     {% endif %}
     <!-- Insert photo markup below this comment -->
