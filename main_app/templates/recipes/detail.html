@@ -40,7 +40,7 @@
       <form action="{% url 'add_review' recipe.id %}" method="POST">
         {% csrf_token %}
         {{ review_form.as_p }}
-        <input type="submit" class="btn" value="Add Review🖋️">
+        <input type="submit" class="btn" id="add-review" value="Add Review🖋️">
       </form>
     </div>
     <table class="striped">
